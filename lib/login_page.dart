@@ -32,8 +32,13 @@ class _LoginPageState extends State<LoginPage> {
   void validateAndSubmit() async {
     if (validateAndSave()) {
       try { 
-        FirebaseUser user = await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password);
-        print('Signed in: ${user.uid}');
+        if (_formType == FormType.login) {
+          FirebaseUser user = await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password);
+          print('Signed in: ${user.uid}');
+        } else {
+          FirebaseUser user = await FirebaseAuth.instance.createUserWithEmailAndPassword(email: _email, password: _password);
+          print('Registered user: ${user.uid}');
+        }
       }
       catch (e) {
         print('Error: $e');
@@ -42,12 +47,14 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void moveToRegister() {
+    formKey.currentState.reset();
     setState(() {
       _formType = FormType.register;
     });
   }
 
   void moveToLogin() {
+    formKey.currentState.reset();
     setState(() {
       _formType = FormType.login;
     });
