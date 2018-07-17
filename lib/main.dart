@@ -10,14 +10,14 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter login demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: AuthProvider(
-        auth: Auth(),
-        child: RootPage(),
+    return AuthProvider(
+      auth: Auth(),
+      child: MaterialApp(
+        title: 'Flutter login demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: RootPage(),
       ),
     );
   }
