@@ -8,6 +8,7 @@ Source code based on my Flutter & Firebase Authentication video series:
 - [Part 4](https://youtu.be/w_EyVk4qLL4)
 - [Part 5](https://youtu.be/Pl1rKBnmDkU)
 - [Part 6](https://youtu.be/GDrlQ0L4ogg)
+- [Scoped Access with InheritedWidget](https://youtu.be/X8JDPt83c6M)
 
 ## Preview
 
