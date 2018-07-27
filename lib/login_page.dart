@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:login_demo/auth_provider.dart';
 
+
+class EmailFieldValidator {
+  static String validate(String value) {
+    return value.isEmpty ? 'Email can\'t be empty' : null;
+  }
+}
+
+class PasswordFieldValidator {
+  static String validate(String value) {
+    return value.isEmpty ? 'Password can\'t be empty' : null;
+  }
+}
+
 class LoginPage extends StatefulWidget {
   LoginPage({this.onSignedIn});
   final VoidCallback onSignedIn;
@@ -85,13 +98,13 @@ class _LoginPageState extends State<LoginPage> {
     return [
       TextFormField(
         decoration: InputDecoration(labelText: 'Email'),
-        validator: (value) => value.isEmpty ? 'Email can\'t be empty' : null,
+        validator: EmailFieldValidator.validate,
         onSaved: (value) => _email = value,
       ),
       TextFormField(
         decoration: InputDecoration(labelText: 'Password'),
         obscureText: true,
-        validator: (value) => value.isEmpty ? 'Password can\'t be empty' : null,
+        validator: PasswordFieldValidator.validate,
         onSaved: (value) => _password = value,
       ),
     ];
