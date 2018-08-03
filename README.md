@@ -9,6 +9,8 @@ Source code based on my Flutter & Firebase Authentication video series:
 - [Part 5](https://youtu.be/Pl1rKBnmDkU)
 - [Part 6](https://youtu.be/GDrlQ0L4ogg)
 - [Scoped Access with InheritedWidget](https://youtu.be/X8JDPt83c6M)
+- [Add Unit Tests to Your App](https://youtu.be/h0IbAIHAwnk)
+
 
 ## Preview
 
