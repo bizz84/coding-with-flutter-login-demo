@@ -97,11 +97,13 @@ class _LoginPageState extends State<LoginPage> {
   List<Widget> buildInputs() {
     return [
       TextFormField(
+        key: Key('email'),
         decoration: InputDecoration(labelText: 'Email'),
         validator: EmailFieldValidator.validate,
         onSaved: (value) => _email = value,
       ),
       TextFormField(
+        key: Key('password'),
         decoration: InputDecoration(labelText: 'Password'),
         obscureText: true,
         validator: PasswordFieldValidator.validate,
@@ -114,6 +116,7 @@ class _LoginPageState extends State<LoginPage> {
     if (_formType == FormType.login) {
       return [
         RaisedButton(
+          key: Key('signIn'),
           child: Text('Login', style: TextStyle(fontSize: 20.0)),
           onPressed: validateAndSubmit,
         ),
