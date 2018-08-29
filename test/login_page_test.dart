@@ -38,7 +38,7 @@ void main() {
   testWidgets('non-empty email and password, valid account, call sign in, succeed', (WidgetTester tester) async {
 
     MockAuth mockAuth = MockAuth();
-    when(mockAuth.signInWithEmailAndPassword('email', 'password')).thenReturn(Future.value('uid'));
+    when(mockAuth.signInWithEmailAndPassword('email', 'password')).thenAnswer((invocation) => Future.value('uid'));
 
     bool didSignIn = false;
     LoginPage page = LoginPage(onSignedIn: () => didSignIn = true);
