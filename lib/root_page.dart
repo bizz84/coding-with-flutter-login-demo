@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:login_demo/auth.dart';
 import 'package:login_demo/home_page.dart';
 import 'package:login_demo/login_page.dart';
 import 'package:login_demo/auth_provider.dart';
 
 class RootPage extends StatefulWidget {
-
   @override
   State<StatefulWidget> createState() => _RootPageState();
 }
@@ -21,11 +21,10 @@ class _RootPageState extends State<RootPage> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    var auth = AuthProvider.of(context).auth;
-    auth.currentUser().then((userId) {
+    final BaseAuth auth = AuthProvider.of(context).auth;
+    auth.currentUser().then((String userId) {
       setState(() {
-        authStatus =
-            userId == null ? AuthStatus.notSignedIn : AuthStatus.signedIn;
+        authStatus = userId == null ? AuthStatus.notSignedIn : AuthStatus.signedIn;
       });
     });
   }
