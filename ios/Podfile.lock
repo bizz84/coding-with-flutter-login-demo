@@ -11,6 +11,9 @@ PODS:
     - Firebase/Auth
     - Firebase/Core
     - Flutter
+  - firebase_core (0.0.1):
+    - Firebase/Core
+    - Flutter
   - FirebaseAnalytics (5.0.1):
     - FirebaseCore (~> 5.0)
     - FirebaseInstanceID (~> 3.0)
@@ -36,6 +39,7 @@ PODS:
 
 DEPENDENCIES:
   - firebase_auth (from `.symlinks/plugins/firebase_auth/ios`)
+  - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - Flutter (from `.symlinks/flutter/ios`)
 
 SPEC REPOS:
@@ -52,21 +56,24 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   firebase_auth:
     :path: ".symlinks/plugins/firebase_auth/ios"
+  firebase_core:
+    :path: ".symlinks/plugins/firebase_core/ios"
   Flutter:
     :path: ".symlinks/flutter/ios"
 
 SPEC CHECKSUMS:
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
-  firebase_auth: 27a5a77a032d557c18f8e223aaf8ec1368f6cdbc
+  firebase_auth: 02ced56521bc9f220d40edda27b1ec5a2fcdf01e
+  firebase_core: ce5006bb48508ee4e71e0f429a3f519bb8ee2961
   FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
   FirebaseAuth: 096e457cdd4274412a66c4a35874787e411f5a03
   FirebaseCore: 42b3267233bd21a5abd54117ccc38ca3dd0f8e83
   FirebaseInstanceID: f3f0657372592ecdfdfe2cac604a5a75758376a6
-  Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
+  Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
 PODFILE CHECKSUM: 1e5af4103afd21ca5ead147d7b81d06f494f51a2
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.2
