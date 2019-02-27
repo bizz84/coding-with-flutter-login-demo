@@ -1,5 +1,5 @@
 name: login_demo
-description: A new Flutter project.
+description: Flutter and Firebase authentication demo
 
 dependencies:
   flutter:
@@ -13,7 +13,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  mockito: 3.0.0
+  mockito: 4.0.0
 
 
 # For information on the generic Dart part of this file, see the

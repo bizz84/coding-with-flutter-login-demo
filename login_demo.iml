@@ -23,6 +23,12 @@
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/firebase_auth/example/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/firebase_auth/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/firebase_auth/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/firebase_core/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/firebase_core/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/firebase_core/build" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/firebase_core/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/firebase_core/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/firebase_core/example/build" />
       <excludeFolder url="file://$MODULE_DIR$/ios/Pods/.symlinks/plugins/firebase_auth/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/ios/Pods/.symlinks/plugins/firebase_auth/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/ios/Pods/.symlinks/plugins/firebase_auth/build" />
