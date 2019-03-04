@@ -24,15 +24,13 @@ void main() {
 
     MockAuth mockAuth = MockAuth();
 
-    bool didSignIn = false;
-    LoginPage page = LoginPage(onSignedIn: () => didSignIn = true);
+    LoginPage page = LoginPage();
 
     await tester.pumpWidget(makeTestableWidget(child: page, auth: mockAuth));
 
     await tester.tap(find.byKey(Key('signIn')));
 
     verifyNever(mockAuth.signInWithEmailAndPassword('', ''));
-    expect(didSignIn, false);
   });
 
   testWidgets('non-empty email and password, valid account, call sign in, succeed', (WidgetTester tester) async {
@@ -40,8 +38,7 @@ void main() {
     MockAuth mockAuth = MockAuth();
     when(mockAuth.signInWithEmailAndPassword('email', 'password')).thenAnswer((invocation) => Future.value('uid'));
 
-    bool didSignIn = false;
-    LoginPage page = LoginPage(onSignedIn: () => didSignIn = true);
+    LoginPage page = LoginPage();
 
     await tester.pumpWidget(makeTestableWidget(child: page, auth: mockAuth));
     
@@ -54,8 +51,7 @@ void main() {
     await tester.tap(find.byKey(Key('signIn')));
 
     verify(mockAuth.signInWithEmailAndPassword('email', 'password')).called(1);
-    expect(didSignIn, true);
-    
+
   });
 
   testWidgets('non-empty email and password, valid account, call sign in, fails', (WidgetTester tester) async {
@@ -63,8 +59,7 @@ void main() {
     MockAuth mockAuth = MockAuth();
     when(mockAuth.signInWithEmailAndPassword('email', 'password')).thenThrow(StateError('invalid credentials'));
 
-    bool didSignIn = false;
-    LoginPage page = LoginPage(onSignedIn: () => didSignIn = true);
+    LoginPage page = LoginPage();
 
     await tester.pumpWidget(makeTestableWidget(child: page, auth: mockAuth));
 
@@ -77,8 +72,6 @@ void main() {
     await tester.tap(find.byKey(Key('signIn')));
 
     verify(mockAuth.signInWithEmailAndPassword('email', 'password')).called(1);
-    expect(didSignIn, false);
-
   });
 
 }

@@ -15,8 +15,6 @@ class PasswordFieldValidator {
 }
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({this.onSignedIn});
-  final VoidCallback onSignedIn;
 
   @override
   State<StatefulWidget> createState() => _LoginPageState();
@@ -54,7 +52,6 @@ class _LoginPageState extends State<LoginPage> {
           final String userId = await auth.createUserWithEmailAndPassword(_email, _password);
           print('Registered user: $userId');
         }
-        widget.onSignedIn();
       } catch (e) {
         print('Error: $e');
       }

@@ -3,14 +3,11 @@ import 'package:login_demo/auth.dart';
 import 'package:login_demo/auth_provider.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({this.onSignedOut});
-  final VoidCallback onSignedOut;
 
   Future<void> _signOut(BuildContext context) async {
     try {
       final BaseAuth auth = AuthProvider.of(context).auth;
       await auth.signOut();
-      onSignedOut();
     } catch (e) {
       print(e);
     }
